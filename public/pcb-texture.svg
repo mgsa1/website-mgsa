@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+  <defs>
+    <pattern id="pcb" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <!-- Horizontal traces -->
+      <line x1="0" y1="25" x2="20" y2="25" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="30" y1="25" x2="70" y2="25" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="80" y1="25" x2="100" y2="25" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="0" y1="75" x2="35" y2="75" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="45" y1="75" x2="100" y2="75" stroke="#1C1C1A" stroke-width="0.75"/>
+      <!-- Vertical traces -->
+      <line x1="25" y1="0" x2="25" y2="20" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="25" y1="30" x2="25" y2="70" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="25" y1="80" x2="25" y2="100" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="75" y1="0" x2="75" y2="40" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="75" y1="50" x2="75" y2="100" stroke="#1C1C1A" stroke-width="0.75"/>
+      <!-- Via pads at intersections -->
+      <circle cx="25" cy="25" r="3" fill="none" stroke="#1C1C1A" stroke-width="0.75"/>
+      <circle cx="25" cy="25" r="1" fill="#1C1C1A"/>
+      <circle cx="75" cy="75" r="3" fill="none" stroke="#1C1C1A" stroke-width="0.75"/>
+      <circle cx="75" cy="75" r="1" fill="#1C1C1A"/>
+      <!-- SMD pads -->
+      <rect x="68" y="22" width="7" height="4" rx="0.5" fill="none" stroke="#1C1C1A" stroke-width="0.75"/>
+      <rect x="22" y="68" width="7" height="4" rx="0.5" fill="none" stroke="#1C1C1A" stroke-width="0.75"/>
+      <!-- L-turn connector -->
+      <line x1="75" y1="25" x2="75" y2="45" stroke="#1C1C1A" stroke-width="0.75"/>
+      <line x1="75" y1="45" x2="100" y2="45" stroke="#1C1C1A" stroke-width="0.75"/>
+    </pattern>
+  </defs>
+  <rect width="100" height="100" fill="url(#pcb)"/>
+</svg>

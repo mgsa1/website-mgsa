@@ -1,0 +1,43 @@
+---
+import { projects } from '../data/projects';
+---
+
+<section id="projects" class="relative px-6 py-16 md:py-24">
+  <!-- PCB texture background -->
+  <div
+    class="pointer-events-none absolute inset-0"
+    style="background-image: url('/pcb-texture.svg'); background-repeat: repeat; background-size: 100px 100px; opacity: 0.04;"
+    aria-hidden="true"
+  ></div>
+
+  <div class="relative mx-auto max-w-3xl">
+    <h2 class="mb-10 text-xs font-semibold uppercase tracking-widest text-muted">
+      Projects
+    </h2>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        projects.map((project) => (
+          <article class="group flex flex-col gap-3 rounded-sm border border-border bg-bg p-5 transition-colors hover:border-muted">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="text-sm font-semibold leading-snug text-text">
+                {project.title}
+              </h3>
+              <span class="shrink-0 font-mono text-xs text-muted">{project.year}</span>
+            </div>
+
+            <p class="text-sm leading-relaxed text-muted">{project.description}</p>
+
+            <div class="mt-auto flex flex-wrap gap-1.5">
+              {project.tags.map((tag) => (
+                <span class="rounded-sm border border-border px-2 py-0.5 font-mono text-xs text-muted">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

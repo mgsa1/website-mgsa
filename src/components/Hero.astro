@@ -1,0 +1,65 @@
+---
+---
+
+<section class="px-6 py-24 md:py-32">
+  <div class="mx-auto max-w-3xl">
+    <!-- Terminal line -->
+    <p
+      id="terminal-line"
+      class="mb-10 min-h-[1.4em] font-mono text-sm text-muted"
+      aria-label="matthieu --location San Francisco --from Paris · Zürich"
+    ></p>
+
+    <!-- Main hero content, hidden until animation completes -->
+    <div id="hero-main" style="opacity: 0; transition: opacity 0.8s ease;">
+      <h1 class="mb-4 text-4xl font-semibold tracking-tight text-text md:text-5xl">
+        Matthieu<br />Gallet de Saint Aurin
+      </h1>
+      <p class="text-base text-muted md:text-lg">
+        Robotics <span class="text-accent">·</span> Hardware <span class="text-accent">·</span> AI
+        <span class="ml-2 text-base opacity-80">🇫🇷 🇨🇭</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const terminalEl = document.getElementById('terminal-line')!;
+  const heroMain = document.getElementById('hero-main')!;
+  const text = '> matthieu --location "San Francisco" --from "Paris · Zürich"';
+  let i = 0;
+
+  function type() {
+    if (i < text.length) {
+      terminalEl.textContent += text[i++];
+      setTimeout(type, 32);
+    } else {
+      // Blinking cursor after typing completes
+      const cursor = document.createElement('span');
+      cursor.className = 'terminal-cursor';
+      cursor.textContent = '▋';
+      terminalEl.appendChild(cursor);
+
+      // Fade in the name + tagline
+      setTimeout(() => {
+        heroMain.style.opacity = '1';
+      }, 350);
+    }
+  }
+
+  // Small delay before starting
+  setTimeout(type, 400);
+</script>
+
+<style>
+  .terminal-cursor {
+    color: var(--color-accent);
+    animation: blink 1.1s step-end infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+</style>
