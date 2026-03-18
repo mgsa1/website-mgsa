@@ -10,8 +10,9 @@
       aria-label="matthieu --location San Francisco --from Paris · Zürich"
     ></p>
 
-    <!-- Main hero content, hidden until animation completes -->
+    <!-- Main hero content, hidden until animation completes (JS shows it; noscript fallback below) -->
     <div id="hero-main" style="opacity: 0; transition: opacity 0.8s ease;">
+    <noscript><style>#hero-main { opacity: 1 !important; }</style></noscript>
       <h1 class="mb-4 text-4xl font-semibold tracking-tight text-text md:text-5xl">
         Matthieu<br />Gallet de Saint Aurin
       </h1>
@@ -40,15 +41,25 @@
       cursor.textContent = '▋';
       terminalEl.appendChild(cursor);
 
-      // Fade in the name + tagline
+      // Fade in the name + tagline (shortened from 350ms)
       setTimeout(() => {
         heroMain.style.opacity = '1';
-      }, 350);
+      }, 150);
     }
   }
 
-  // Small delay before starting
-  setTimeout(type, 400);
+  // Respect prefers-reduced-motion: skip animation and show everything immediately
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    terminalEl.textContent = text;
+    const cursor = document.createElement('span');
+    cursor.className = 'terminal-cursor';
+    cursor.textContent = '▋';
+    terminalEl.appendChild(cursor);
+    heroMain.style.opacity = '1';
+  } else {
+    // Small delay before starting (shortened from 400ms)
+    setTimeout(type, 200);
+  }
 </script>
 
 <style>
