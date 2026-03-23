@@ -1,24 +1,23 @@
 ---
 ---
 
-<section class="px-6 py-16 md:py-20">
+<section class="px-6 pt-16 pb-8 md:pt-20 md:pb-10">
   <div class="mx-auto max-w-3xl">
     <!-- Terminal line -->
     <p
       id="terminal-line"
       class="mb-10 min-h-[1.4em] font-mono text-sm text-muted"
-      aria-label="matthieu --location San Francisco --from Paris · Zürich"
+      aria-label="mgsa --location San Francisco --from Paris · Zürich"
     ></p>
 
     <!-- Main hero content, hidden until animation completes (JS shows it; noscript fallback below) -->
     <div id="hero-main" style="opacity: 0; transition: opacity 0.8s ease;">
     <noscript><style>#hero-main { opacity: 1 !important; }</style></noscript>
       <h1 class="mb-4 text-4xl font-semibold tracking-tight text-text md:text-5xl">
-        Matthieu<br />Gallet de Saint Aurin
+        mgsa
       </h1>
       <p class="text-base text-muted md:text-lg">
         Robotics <span class="text-accent">·</span> Hardware <span class="text-accent">·</span> AI
-        <span class="ml-2 text-base opacity-80">🇫🇷 🇨🇭</span>
       </p>
     </div>
   </div>
@@ -27,7 +26,7 @@
 <script>
   const terminalEl = document.getElementById('terminal-line')!;
   const heroMain = document.getElementById('hero-main')!;
-  const text = '> matthieu --location "San Francisco" --from "Paris · Zürich"';
+  const text = '> mgsa --location "San Francisco" --from "Paris · Zürich"';
   let i = 0;
 
   function type() {

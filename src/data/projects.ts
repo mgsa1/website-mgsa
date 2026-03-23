@@ -3,41 +3,44 @@ export interface Project {
   description: string;
   tags: string[];
   year: string;
+  url?: string;
 }
 
 export const projects: Project[] = [
   {
-    title: 'Gas leakage sensing — 0 to mass production',
+    title: 'RunningForm',
     description:
-      'Full NPI lifecycle from R&D to mass production for the Asian market. UL-certified, 10M+ units/yr.',
-    tags: ['NPI', 'Hardware', 'Supply Chain'],
+      'Using AI to help people stop getting injured running',
+    tags: ['Software', 'AI'],
+    year: '2026',
+    url: 'https://runningform.vercel.app/history',
+  },
+  {
+    title: 'Sensor stuff — Sensirion',
+    description:
+      'Led gas sensing product from R&D to mass production in new applications, UL-regulated and with global customers',
+    tags: ['AI', 'Hardware', 'NPI', 'Product'],
     year: '2022–2024',
   },
   {
-    title: 'HW/SW sensor-fusion platform',
+    title: 'Robotic manufacturing system — Harvard / Gencores',
     description:
-      'Invented algorithm suite bridging ML, UX and R&D — shifting a sensor company from component supplier to solutions provider.',
-    tags: ['AI', 'Hardware', 'Product'],
-    year: '2024',
-  },
-  {
-    title: 'Robotic manufacturing system',
-    description:
-      '0→1 robotic startup at Harvard: architecture, prototyping, and pilots delivered to Energy and Transport customers.',
+      '0→1 robotic startup: architecture, prototyping, and pilots',
     tags: ['Robotics', 'Research', '0→1'],
     year: '2021–2022',
   },
   {
-    title: 'AI indoor navigation robot',
+    title: 'AI indoor navigation — University of Toronto / Apple',
     description:
-      'Autonomous navigation and path planning for a robot operating in crowded indoor scenes.',
-    tags: ['AI', 'Robotics', 'EPFL'],
-    year: '2021',
+      'Autonomous navigation and path planning for robots in dynamic scenes',
+    tags: ['AI', 'Robotics', 'Research'],
+    year: '2020',
+    url: 'https://machinelearning.apple.com/research/learning-spatiotemporal-occupancy',
   },
   {
-    title: 'G3 Greenbox',
+    title: 'G3 Greenbox — Founder',
     description:
-      'Cut geotechnical data-collection costs 100× with proprietary hardware integrated into construction workflows.',
+      'Founded and built a geotechnical analyser that cut field data-collection costs 100× with proprietary hardware integrated into construction workflows',
     tags: ['Hardware', 'Founder', 'Deep Tech'],
     year: '2017–2019',
   },

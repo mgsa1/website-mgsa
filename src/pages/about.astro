@@ -1,21 +1,25 @@
 ---
 import Base from '../layouts/Base.astro';
-import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Base title="About — Matthieu Gallet de Saint Aurin">
-  <Nav />
-
+<Base title="About — mgsa">
   <main class="grow px-6 py-24 md:py-32">
     <div class="mx-auto max-w-3xl">
+      <a
+        href="/"
+        class="mb-6 inline-block text-sm text-muted transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] rounded-sm"
+      >
+        ← Home
+      </a>
+
       <h1 class="mb-10 text-3xl font-semibold tracking-tight text-text md:text-4xl">
         About
       </h1>
 
       <div class="prose text-muted">
         <p class="text-base leading-relaxed">
-          <!-- Write your story here. -->
+          This webpage lists what I am tinkering on.
         </p>
       </div>
     </div>
