@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git ls-tree:*)",
-      "Skill(browse)",
-      "Skill(browse:*)"
-    ]
-  }
-}
