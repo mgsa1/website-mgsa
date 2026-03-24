@@ -8,6 +8,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'esurf',
+    description:
+      'Interactive surfing simulator with physics-based wave generation and skill-based riding mechanics',
+    tags: ['Software', 'Games'],
+    year: '2026',
+    url: 'https://esurf.vercel.app',
+  },
+  {
     title: 'RunningForm',
     description:
       'Using AI to help people stop getting injured running',
