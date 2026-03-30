@@ -21,14 +21,15 @@ export const projects: Project[] = [
       'Using AI to help people stop getting injured running',
     tags: ['Software', 'AI'],
     year: '2026',
-    url: 'https://runningform.vercel.app/history',
+    url: 'https://runningform.vercel.app',
   },
   {
     title: 'Sensor stuff — Sensirion',
     description:
       'Led gas sensing product from R&D to mass production in new applications, UL-regulated and with global customers',
     tags: ['AI', 'Hardware', 'NPI', 'Product'],
-    year: '2022–2024',
+    year: '2022–now',
+    url: 'https://sensirion.com',
   },
   {
     title: 'Robotic manufacturing system — Harvard / Gencores',
