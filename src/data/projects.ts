@@ -8,6 +8,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'PolicyGrader',
+    description:
+      'Agentic stress testing for robot control policies — collapses hours of manual rollout review into minutes',
+    tags: ['AI', 'Robotics', 'Software'],
+    year: '2026',
+    url: 'https://github.com/mgsa1/PolicyGrader',
+  },
+  {
     title: 'esurf',
     description:
       'Interactive surfing simulator with physics-based wave generation and skill-based riding mechanics',
