@@ -8,6 +8,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Actuator notes',
+    description:
+      'Taking apart the Unitree GO-M8010-6 joint actuator chapter by chapter, from the brushless motor to the driver board, toward a simulated production line',
+    tags: ['Robotics', 'Hardware', 'Writing'],
+    year: '2026',
+    url: 'https://actuators.gdsa.eu',
+  },
+  {
     title: 'PolicyGrader',
     description:
       'Agentic stress testing for robot control policies — collapses hours of manual rollout review into minutes',
